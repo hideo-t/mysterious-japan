@@ -151,7 +151,7 @@ def patch_file(filepath: Path, inject_block: str) -> bool:
 def main():
     base = Path('worldkings_output')
     if not base.exists():
-        print(f"Error: {base} not found. Run from the worldkingjapan directory.")
+        print(f"Error: {base} not found. Run from the mysterious-japan directory.")
         return
 
     # Build story list

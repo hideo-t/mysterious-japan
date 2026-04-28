@@ -141,7 +141,7 @@ def main():
     args = parser.parse_args()
 
     if not OUTPUT_BASE.exists():
-        print(f"❌ {OUTPUT_BASE} が見つかりません。worldkingjapan フォルダで実行してください。")
+        print(f"❌ {OUTPUT_BASE} が見つかりません。mysterious-japan フォルダで実行してください。")
         sys.exit(1)
 
     targets = []

@@ -1030,7 +1030,7 @@ def send_gmail(
 
 def git_push(output_dir: Path, pref_name: str, wl_key: str) -> bool:
     """Add generated files to PARENT repo and push.
-    Does NOT create nested git repos — works with the parent worldkingjapan repo."""
+    Does NOT create nested git repos — works with the parent mysterious-japan repo."""
     
     # Find parent repo root (walk up from output_dir until we find .git)
     parent = output_dir.resolve()
@@ -1044,7 +1044,7 @@ def git_push(output_dir: Path, pref_name: str, wl_key: str) -> bool:
     if not repo_root:
         console.print("[yellow]⚠ 親Gitリポジトリが見つかりません。git initしてください。[/]")
         console.print(f"  cd {OUTPUT_BASE.resolve().parent}")
-        console.print(f"  git init && git remote add origin https://github.com/yourname/worldkingjapan.git")
+        console.print(f"  git init && git remote add origin https://github.com/yourname/mysterious-japan.git")
         return False
 
     try:

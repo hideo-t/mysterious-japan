@@ -17,11 +17,11 @@ from pathlib import Path
 try:
     from world_kings_data import PREFECTURES
 except ImportError:
-    print("❌ world_kings_data.py が見つかりません。worldkingjapan フォルダで実行してください。")
+    print("❌ world_kings_data.py が見つかりません。mysterious-japan フォルダで実行してください。")
     sys.exit(1)
 
 OUTPUT_BASE = Path("worldkings_output")
-BASE_URL    = "https://hideo-t.github.io/worldkingjapan"
+BASE_URL    = "https://hideo-t.github.io/mysterious-japan"
 MARKER      = "<!-- ogp-injected -->"
 
 
@@ -134,7 +134,7 @@ def main():
 
     # ── 詳細ページ235本 ──
     if not OUTPUT_BASE.exists():
-        print(f"❌ {OUTPUT_BASE} が見つかりません。worldkingjapan フォルダで実行してください。")
+        print(f"❌ {OUTPUT_BASE} が見つかりません。mysterious-japan フォルダで実行してください。")
         sys.exit(1)
 
     targets = []

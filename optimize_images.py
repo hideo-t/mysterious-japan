@@ -8,7 +8,7 @@
 
 使い方:
   pip install Pillow
-  cd worldkingjapan
+  cd mysterious-japan
   python optimize_images.py
 """
 from pathlib import Path
@@ -51,7 +51,7 @@ def update_detail_html(html_path):
 
 def main():
     if not BASE.exists():
-        print(f"Error: {BASE} not found. Run from worldkingjapan directory.")
+        print(f"Error: {BASE} not found. Run from mysterious-japan directory.")
         sys.exit(1)
 
     total_orig = 0

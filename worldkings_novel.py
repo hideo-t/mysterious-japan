@@ -813,15 +813,15 @@ def build_html_reader(
 <meta name="description"        content="「{pref['question']}」{pref_name}を舞台にしたAIファンタジー小説。世界線：{wl_key}（{wl_value}）">
 <meta property="og:type"        content="article">
 <meta property="og:site_name"   content="世界王 World Kings">
-<meta property="og:url"         content="https://hideo-t.github.io/worldkingjapan/worldkings_output/{pref_name}_{wl_key}/index.html">
+<meta property="og:url"         content="https://hideo-t.github.io/mysterious-japan/worldkings_output/{pref_name}_{wl_key}/index.html">
 <meta property="og:title"       content="{pref_name}〈{wl_key}〉{wl_value} ── 世界王">
 <meta property="og:description" content="「{pref['question']}」{pref_name}を舞台にしたAIファンタジー小説。世界線：{wl_key}（{wl_value}）">
-<meta property="og:image"       content="https://hideo-t.github.io/worldkingjapan/worldkings_output/{pref_name}_{wl_key}/thumbs/chapter_01.webp">
+<meta property="og:image"       content="https://hideo-t.github.io/mysterious-japan/worldkings_output/{pref_name}_{wl_key}/thumbs/chapter_01.webp">
 <meta property="og:locale"      content="ja_JP">
 <meta name="twitter:card"       content="summary_large_image">
 <meta name="twitter:title"      content="{pref_name}〈{wl_key}〉{wl_value} ── 世界王">
 <meta name="twitter:description" content="「{pref['question']}」{pref_name}を舞台にしたAIファンタジー小説。世界線：{wl_key}（{wl_value}）">
-<meta name="twitter:image"      content="https://hideo-t.github.io/worldkingjapan/worldkings_output/{pref_name}_{wl_key}/thumbs/chapter_01.webp">
+<meta name="twitter:image"      content="https://hideo-t.github.io/mysterious-japan/worldkings_output/{pref_name}_{wl_key}/thumbs/chapter_01.webp">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
 
@@ -1103,7 +1103,7 @@ def send_gmail(
 
 def git_push(output_dir: Path, pref_name: str, wl_key: str) -> bool:
     """Add generated files to PARENT repo and push.
-    Does NOT create nested git repos — works with the parent worldkingjapan repo."""
+    Does NOT create nested git repos — works with the parent mysterious-japan repo."""
     
     # Find parent repo root (walk up from output_dir until we find .git)
     parent = output_dir.resolve()
@@ -1117,7 +1117,7 @@ def git_push(output_dir: Path, pref_name: str, wl_key: str) -> bool:
     if not repo_root:
         console.print("[yellow]⚠ 親Gitリポジトリが見つかりません。git initしてください。[/]")
         console.print(f"  cd {OUTPUT_BASE.resolve().parent}")
-        console.print(f"  git init && git remote add origin https://github.com/yourname/worldkingjapan.git")
+        console.print(f"  git init && git remote add origin https://github.com/yourname/mysterious-japan.git")
         return False
 
     try:
